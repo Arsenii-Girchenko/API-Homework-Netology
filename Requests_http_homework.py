@@ -1,4 +1,4 @@
-TOKEN = 'y0_AgAAAAAbP2AbAADLWwAAAADecWQU33lN8lGoT565Zcw_yutO_41FHDc'
+TOKEN = ''
 
 
 from pprint import pprint
