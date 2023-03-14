@@ -1,10 +1,10 @@
 TOKEN = 'y0_AgAAAAAbP2AbAADLWwAAAADecWQU33lN8lGoT565Zcw_yutO_41FHDc'
-# Задача №1
+
 
 from pprint import pprint
 import requests
-import os
 
+# Задача №1
 
 # # def compare_heroes_by_stat(url, heroes_names: list, stat: str):
 # #     all_heroes_info = requests.get(url=url).json()
@@ -22,12 +22,13 @@ import os
 # #     url = "https://akabab.github.io/superhero-api/api/all.json"
 # #     pprint(f'Hero with the highest {stat} stat is {compare_heroes_by_stat(url, heroes_list, stat)}')
     
+    
 # # Задача №2
 
 class YaUploader:
     def __init__(self, token: str):
         self.token = token
-        self.yandex_url = "https://cloud-api.yandex.net:443"
+        self.yandex_url = "https://cloud-api.yandex.net"
         
     def get_headers(self):
         return {
@@ -52,5 +53,4 @@ class YaUploader:
 
 if __name__ == '__main__':
     ya = YaUploader(TOKEN)
-    ya.upload_file_to_disk('', "File_for_Yandex.txt")
-    # pprint(ya.get_files_list())
+    ya.upload_file_to_disk('Netology', "File_for_Yandex.txt")
