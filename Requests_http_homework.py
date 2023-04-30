@@ -44,7 +44,8 @@ class YaUploader:
     def upload_file_to_disk(self, where_to_upload, filename):
         upload_response = self.get_upload_link(where_to_upload)
         upload_url = upload_response.get('href')
-        response = requests.put(upload_url, files={'file': open(filename, 'rb')}, headers=self.get_headers())
+        with open(filename, 'rb') as f:
+            response = requests.put(upload_url, files={'file': f}, headers=self.get_headers())
         print(response)
         
 ya = YaUploader(TOKEN)
